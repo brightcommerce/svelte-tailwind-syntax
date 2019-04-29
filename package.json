@@ -1,6 +1,6 @@
 {
     "name": "svelte-tailwind-syntax",
-    "displayName": "Svelte-Tailwind syntax",
+    "displayName": "Svelte Tailwind Syntax",
     "description": "Tailwind syntax highlighting for Svelte",
     "version": "1.0.0",
     "publisher": "brightcommerce",
