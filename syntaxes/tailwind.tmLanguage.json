@@ -1,0 +1,93 @@
+{
+  "fileTypes": [],
+  "injectionSelector": "source.css.html, source.css.svelte",
+  "scopeName": "source.css.tailwind",
+  "patterns": [
+    {
+      "include": "#at_rule_tailwind"
+    },
+    {
+      "include": "#at_rule_responsive"
+    },
+    {
+      "include": "#at_rule_apply"
+    },
+    {
+      "include": "#at_rule_screen"
+    },
+    {
+      "include": "#at_rule_variants"
+    }
+  ],
+  "repository": {
+    "at_rule_tailwind": {
+      "begin": "\\s*((@)tailwind)",
+      "end": "\\s*(\\n|;)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.at-rule.tailwind.tailwind"
+        },
+        "2": {
+          "name": "punctuation.definition.keyword"
+        }
+      }
+    },
+    "at_rule_apply": {
+      "begin": "\\s*((@)apply)",
+      "end": "\\s*(\\n|;)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.at-rule.apply.tailwind"
+        },
+        "2": {
+          "name": "punctuation.definition.keyword"
+        }
+      }
+    },
+    "at_rule_responsive": {
+      "begin": "\\s*((@)responsive)",
+      "end": "\\s*(?={)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.at-rule.responsive.tailwind"
+        },
+        "2": {
+          "name": "punctuation.definition.keyword"
+        }
+      }
+    },
+    "at_rule_screen": {
+      "begin": "((@)screen)\\s*(\\w+)",
+      "end": "\\s*(?={)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.at-rule.screen.tailwind"
+        },
+        "2": {
+          "name": "punctuation.definition.keyword"
+        }, 
+        "3": {
+          "name": "entity.name.screen.tailwind"
+        }
+      }
+    },
+    "at_rule_variants": {
+      "begin": "\\s*((@)variants)",
+      "end": "\\s*(?={)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.at-rule.variants.tailwind"
+        },
+        "2": {
+          "name": "punctuation.definition.keyword"
+        }
+      },
+      "patterns": [
+        {
+          "match": "\\s*(\\w+)\\s*",
+          "name": "entity.name.variant.tailwind"
+        }
+      ]
+    }
+  }
+}

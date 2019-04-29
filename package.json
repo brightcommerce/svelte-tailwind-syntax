@@ -1,0 +1,53 @@
+{
+    "name": "svelte-tailwind-syntax",
+    "displayName": "Svelte-Tailwind syntax",
+    "description": "Tailwind syntax highlighting for Svelte",
+    "version": "1.0.0",
+    "publisher": "brightcommerce",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/brightcommerce/svelte-tailwind-syntax.git"
+    },
+    "icon": "icon.png",
+    "engines": {
+        "vscode": "^1.26.0"
+    },
+    "categories": [
+        "Formatters", "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.sayHello"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.sayHello",
+                "title": "Activation"
+            }
+        ],
+        "grammars": [
+            {
+                "injectTo": [
+                    "source.css.html",
+                    "source.css.svelte"
+                ],
+                "scopeName": "source.css.tailwind",
+                "path": "./syntaxes/tailwind.tmLanguage.json"
+            }
+        ]        
+    },
+    
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test",
+        "publish": "vsce publish"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "eslint": "^4.11.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    }
+}
